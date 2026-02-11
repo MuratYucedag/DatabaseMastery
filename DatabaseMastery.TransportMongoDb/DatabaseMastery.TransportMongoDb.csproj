@@ -1,0 +1,147 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-bs5\node_modules\jquery\AUTHORS.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-bs5\node_modules\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-bs5\node_modules\jquery\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons-bs5\node_modules\jquery\AUTHORS.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons-bs5\node_modules\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons-bs5\node_modules\jquery\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons\node_modules\jquery\AUTHORS.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons\node_modules\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons\node_modules\jquery\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-keytable-bs5\node_modules\jquery\AUTHORS.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-keytable-bs5\node_modules\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-keytable-bs5\node_modules\jquery\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-keytable\node_modules\jquery\AUTHORS.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-keytable\node_modules\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-keytable\node_modules\jquery\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-responsive-bs5\node_modules\jquery\AUTHORS.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-responsive-bs5\node_modules\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-responsive-bs5\node_modules\jquery\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-responsive\node_modules\jquery\AUTHORS.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-responsive\node_modules\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-responsive\node_modules\jquery\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select-bs5\node_modules\jquery\AUTHORS.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select-bs5\node_modules\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select-bs5\node_modules\jquery\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select\node_modules\jquery\AUTHORS.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select\node_modules\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select\node_modules\jquery\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net\node_modules\jquery\AUTHORS.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net\node_modules\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net\node_modules\jquery\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\jquery.counterup\node_modules\jquery\AUTHORS.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\jquery.counterup\node_modules\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="wwwroot\Silva-Admin\dist\assets\libs\jquery.counterup\node_modules\jquery\LICENSE.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-bs5\node_modules\jquery\external\sizzle\sizzle.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-bs5\node_modules\jquery\jquery.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-bs5\node_modules\jquery\jquery.slim.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons-bs5\node_modules\jquery\external\sizzle\sizzle.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons-bs5\node_modules\jquery\jquery.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons-bs5\node_modules\jquery\jquery.slim.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons\node_modules\jquery\external\sizzle\sizzle.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons\node_modules\jquery\jquery.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons\node_modules\jquery\jquery.slim.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-keytable-bs5\node_modules\jquery\external\sizzle\sizzle.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-keytable-bs5\node_modules\jquery\jquery.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-keytable-bs5\node_modules\jquery\jquery.slim.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-keytable\node_modules\jquery\external\sizzle\sizzle.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-keytable\node_modules\jquery\jquery.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-keytable\node_modules\jquery\jquery.slim.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-responsive-bs5\node_modules\jquery\external\sizzle\sizzle.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-responsive-bs5\node_modules\jquery\jquery.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-responsive-bs5\node_modules\jquery\jquery.slim.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-responsive\node_modules\jquery\external\sizzle\sizzle.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-responsive\node_modules\jquery\jquery.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-responsive\node_modules\jquery\jquery.slim.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select-bs5\node_modules\jquery\external\sizzle\sizzle.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select-bs5\node_modules\jquery\jquery.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select-bs5\node_modules\jquery\jquery.slim.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select\node_modules\jquery\external\sizzle\sizzle.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select\node_modules\jquery\jquery.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select\node_modules\jquery\jquery.slim.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net\node_modules\jquery\external\sizzle\sizzle.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net\node_modules\jquery\jquery.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net\node_modules\jquery\jquery.slim.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\jquery.counterup\node_modules\jquery\external\sizzle\sizzle.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\jquery.counterup\node_modules\jquery\jquery.min.js" />
+    <None Include="wwwroot\Silva-Admin\dist\assets\libs\jquery.counterup\node_modules\jquery\jquery.slim.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.18" />
+    <PackageReference Include="MongoDB.Bson" Version="3.6.0" />
+    <PackageReference Include="MongoDB.Driver" Version="3.6.0" />
+    <PackageReference Include="MongoDB.Driver.Core" Version="2.30.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-bs5\node_modules\jquery\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-bs5\node_modules\jquery\external\sizzle\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-bs5\node_modules\jquery\src\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-bs5\types\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons-bs5\node_modules\jquery\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons-bs5\node_modules\jquery\external\sizzle\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons-bs5\node_modules\jquery\src\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons-bs5\types\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons\node_modules\jquery\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons\node_modules\jquery\external\sizzle\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons\node_modules\jquery\src\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-buttons\types\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-keytable-bs5\node_modules\jquery\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-keytable-bs5\node_modules\jquery\external\sizzle\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-keytable-bs5\node_modules\jquery\src\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-keytable\node_modules\jquery\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-keytable\node_modules\jquery\external\sizzle\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-keytable\node_modules\jquery\src\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-responsive-bs5\node_modules\jquery\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-responsive-bs5\node_modules\jquery\external\sizzle\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-responsive-bs5\node_modules\jquery\src\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-responsive\node_modules\jquery\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-responsive\node_modules\jquery\external\sizzle\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-responsive\node_modules\jquery\src\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select-bs5\node_modules\jquery\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select-bs5\node_modules\jquery\external\sizzle\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select-bs5\node_modules\jquery\src\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select-bs5\types\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select\node_modules\jquery\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select\node_modules\jquery\external\sizzle\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select\node_modules\jquery\src\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net-select\types\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net\node_modules\jquery\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net\node_modules\jquery\external\sizzle\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net\node_modules\jquery\src\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\datatables.net\types\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\flatpickr\types\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\flatpickr\utils\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\gmaps\docs\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\gmaps\examples\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\gmaps\test\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\jquery.counterup\demo\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\jquery.counterup\node_modules\jquery\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\jquery.counterup\node_modules\jquery\external\sizzle\dist\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\jquery.counterup\node_modules\jquery\src\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\moment\src\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\simple-datatables\dts\column_filter\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\simple-datatables\dts\convert\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\simple-datatables\dts\editing\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\simple-datatables\dts\export\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\swiper\angular\angular\src\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\swiper\angular\esm2020\angular\src\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\swiper\types\modules\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\waypoints\src\" />
+    <Folder Include="wwwroot\Silva-Admin\dist\assets\libs\waypoints\test\" />
+  </ItemGroup>
+
+</Project>

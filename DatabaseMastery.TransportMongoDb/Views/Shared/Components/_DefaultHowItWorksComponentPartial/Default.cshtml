@@ -1,0 +1,47 @@
+﻿@model List<ResultHowItWorkDto>
+
+<section class="section pt-85 bg-worldmap">
+    <div class="container">
+        <div class="text-center">
+            <img class="mb-15" src="/templates/assets/imgs/template/icons/favicon.svg" alt="transp">
+            <h2 class="color-brand-2 mb-20">Nasıl Çalışıyoruz?</h2>
+            <p class="font-md color-grey-700">
+                Teslimat yapılacak şehirleri siz seçin, gerisini biz planlayalım.
+                Hizmet bölgemize uygun en hızlı ve güvenli taşıma çözümünü belirleyerek gönderilerinizi zamanında ulaştırıyoruz.
+            </p>
+        </div>
+        <div class="row mt-50">
+            <div class="col-lg-6 mb-30">
+                <div class="box-image-how">
+                    <img class="w-100" src="/templates/assets/imgs/page/homepage1/how-it-work.png" alt="transp">
+                    <div class="box-info-bottom-img">
+                        <div class="image-play"><img class="mb-15" src="/templates/assets/imgs/template/icons/play.svg" alt="transp"></div>
+                        <div class="info-play">
+                            <h4 class="color-white mb-15">Lojistikte 25 Yıllık Tecrübe</h4>
+                            <p class="font-sm color-white">
+                                Yılların verdiği deneyimle kara, hava ve deniz taşımacılığında
+                                güvenilir çözümler sunuyoruz. Her gönderide hız, güven ve kaliteyi ön planda tutuyoruz.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-30">
+                <ul class="list-how-works">
+                    @foreach(var item in Model)
+                    {
+                        <li>
+                            <div class="image-how"> <span class="img"> <img src="@item.IconUrl" alt="transp"></span></div>
+                            <div class="info-how">
+                                <h5 class="color-brand-2">@item.Title</h5>
+                                <p class="font-md color-grey-700">@item.Description</p>
+                            </div>
+                        </li>
+                    }
+                   
+                  
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
