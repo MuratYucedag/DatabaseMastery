@@ -4,6 +4,7 @@ using DatabaseMastery.TransportMongoDb.Services.GetInTouchServices;
 using DatabaseMastery.TransportMongoDb.Services.HowItWorkServices;
 using DatabaseMastery.TransportMongoDb.Services.OfferServices;
 using DatabaseMastery.TransportMongoDb.Services.ProjectSectionServices;
+using DatabaseMastery.TransportMongoDb.Services.QuestionServices;
 using DatabaseMastery.TransportMongoDb.Services.SliderServices;
 using DatabaseMastery.TransportMongoDb.Services.TestimonialServices;
 using DatabaseMastery.TransportMongoDb.Settings;
@@ -20,6 +21,7 @@ builder.Services.AddScoped<IGetInTouchService, GetInTouchService>();
 builder.Services.AddScoped<IHowItWorkService, HowItWorkService>();
 builder.Services.AddScoped<ITestimonialService, TestimonialService>();
 builder.Services.AddScoped<IProjectSectionService, ProjectSectionService>();
+builder.Services.AddScoped<IQuestionService, QuestionService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
