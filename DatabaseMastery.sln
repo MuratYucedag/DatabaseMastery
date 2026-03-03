@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36511.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseMastery.TransportMongoDb", "DatabaseMastery.TransportMongoDb\DatabaseMastery.TransportMongoDb.csproj", "{40266355-2B76-4038-94CB-D71707458B8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseMastery.HotCoffeePostgreSQL", "DatabaseMastery.HotCoffeePostgreSQL\DatabaseMastery.HotCoffeePostgreSQL.csproj", "{9534DF7D-89B9-478F-9B62-E3BD4BDA5FDD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseMastery.DinnerMenuPostgreSQL", "DatabaseMastery.DinnerMenuPostgreSQL\DatabaseMastery.DinnerMenuPostgreSQL.csproj", "{2344CA4E-9EA3-4CA4-98ED-90A71E2C6753}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{40266355-2B76-4038-94CB-D71707458B8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40266355-2B76-4038-94CB-D71707458B8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40266355-2B76-4038-94CB-D71707458B8C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9534DF7D-89B9-478F-9B62-E3BD4BDA5FDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9534DF7D-89B9-478F-9B62-E3BD4BDA5FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9534DF7D-89B9-478F-9B62-E3BD4BDA5FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9534DF7D-89B9-478F-9B62-E3BD4BDA5FDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2344CA4E-9EA3-4CA4-98ED-90A71E2C6753}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2344CA4E-9EA3-4CA4-98ED-90A71E2C6753}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2344CA4E-9EA3-4CA4-98ED-90A71E2C6753}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2344CA4E-9EA3-4CA4-98ED-90A71E2C6753}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
