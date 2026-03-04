@@ -1,5 +1,6 @@
 using DatabaseMastery.DinnerMenuPostgreSQL.Context;
 using DatabaseMastery.DinnerMenuPostgreSQL.Services.CategoryServices;
+using DatabaseMastery.DinnerMenuPostgreSQL.Services.DashboardServices;
 using DatabaseMastery.DinnerMenuPostgreSQL.Services.ProductServices;
 using DatabaseMastery.DinnerMenuPostgreSQL.Services.ReservationServices;
 using Microsoft.EntityFrameworkCore;
@@ -16,6 +17,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IReservationService, ReservationService>();
+builder.Services.AddScoped<IDashboardService, DashboardService>();
 
 
 // Add services to the container.

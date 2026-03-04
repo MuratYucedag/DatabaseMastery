@@ -1,0 +1,658 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+    @await Component.InvokeAsync("_DashboardHeadComponentPartial")
+   
+
+
+<body>
+    <div class="dashboard-wrap">
+
+        @await Component.InvokeAsync("_DashboardHeaderComponentPartial")
+        @await Component.InvokeAsync("_DashboardStatisticsCardsComponentPartial")
+     
+
+    
+
+        <!-- ══════════════════════════════════════════
+             2. REZERVASYON TABLOSU  +  3. AKTİVİTE
+        ══════════════════════════════════════════ -->
+        <div class="row g-3 mb-4">
+
+            <!-- TABLO -->
+            <div class="col-xl-8">
+                <div class="dash-card h-100">
+                    <div class="dash-card-header">
+                        <div>
+                            <div class="section-title">Son Rezervasyonlar</div>
+                            <div class="section-sub">En güncel 8 rezervasyon</div>
+                        </div>
+                        <a href="/Reservation/ReservationList" class="view-all">
+                            Tümünü Gör <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div style="overflow-x:auto;">
+                        <table class="res-table">
+                            <thead>
+                                <tr>
+                                    <th>Müşteri</th>
+                                    <th>Telefon</th>
+                                    <th>Tarih</th>
+                                    <th>Saat</th>
+                                    <th>Kişi</th>
+                                    <th>Durum</th>
+                                    <th>Not</th>
+                                    <th class="text-center">İşlem</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span style="font-weight:700;">Ahmet Yılmaz</span></td>
+                                    <td><span style="color:var(--muted);">0532 111 22 33</span></td>
+                                    <td>04 Mar 2026</td>
+                                    <td>19:30</td>
+                                    <td><span class="guest-chip"><i class="bi bi-people-fill" style="font-size:10px;"></i>4</span></td>
+                                    <td><span class="s-badge sb-green"><span class="s-dot"></span>Onaylandı</span></td>
+                                    <td><span style="font-size:12px;color:var(--muted);font-style:italic;">Doğum günü</span></td>
+                                    <td>
+                                        <div class="d-flex justify-content-center gap-1">
+                                            <a href="#" class="btn-xs bx-edit" data-tip="Düzenle"><i class="bi bi-pencil-fill"></i></a>
+                                            <a href="#" class="btn-xs bx-ok" data-tip="Onayla"><i class="bi bi-check-lg"></i></a>
+                                            <a href="#" class="btn-xs bx-cancel" data-tip="İptal Et"><i class="bi bi-x-lg"></i></a>
+                                            <button class="btn-xs bx-del" data-tip="Sil"><i class="bi bi-trash3-fill"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight:700;">Selin Kaya</span></td>
+                                    <td><span style="color:var(--muted);">0541 555 66 77</span></td>
+                                    <td>04 Mar 2026</td>
+                                    <td>20:00</td>
+                                    <td><span class="guest-chip"><i class="bi bi-people-fill" style="font-size:10px;"></i>2</span></td>
+                                    <td><span class="s-badge sb-yellow"><span class="s-dot"></span>Beklemede</span></td>
+                                    <td><span style="font-size:12px;color:var(--muted);">—</span></td>
+                                    <td>
+                                        <div class="d-flex justify-content-center gap-1">
+                                            <a href="#" class="btn-xs bx-edit" data-tip="Düzenle"><i class="bi bi-pencil-fill"></i></a>
+                                            <a href="#" class="btn-xs bx-ok" data-tip="Onayla"><i class="bi bi-check-lg"></i></a>
+                                            <a href="#" class="btn-xs bx-cancel" data-tip="İptal Et"><i class="bi bi-x-lg"></i></a>
+                                            <button class="btn-xs bx-del" data-tip="Sil"><i class="bi bi-trash3-fill"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight:700;">Murat Demir</span></td>
+                                    <td><span style="color:var(--muted);">0505 999 88 77</span></td>
+                                    <td>05 Mar 2026</td>
+                                    <td>13:00</td>
+                                    <td><span class="guest-chip"><i class="bi bi-people-fill" style="font-size:10px;"></i>6</span></td>
+                                    <td><span class="s-badge sb-green"><span class="s-dot"></span>Onaylandı</span></td>
+                                    <td><span style="font-size:12px;color:var(--muted);font-style:italic;">Vejetaryen menü</span></td>
+                                    <td>
+                                        <div class="d-flex justify-content-center gap-1">
+                                            <a href="#" class="btn-xs bx-edit" data-tip="Düzenle"><i class="bi bi-pencil-fill"></i></a>
+                                            <a href="#" class="btn-xs bx-ok" data-tip="Onayla"><i class="bi bi-check-lg"></i></a>
+                                            <a href="#" class="btn-xs bx-cancel" data-tip="İptal Et"><i class="bi bi-x-lg"></i></a>
+                                            <button class="btn-xs bx-del" data-tip="Sil"><i class="bi bi-trash3-fill"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight:700;">Zeynep Arslan</span></td>
+                                    <td><span style="color:var(--muted);">0533 222 33 44</span></td>
+                                    <td>05 Mar 2026</td>
+                                    <td>21:00</td>
+                                    <td><span class="guest-chip"><i class="bi bi-people-fill" style="font-size:10px;"></i>3</span></td>
+                                    <td><span class="s-badge sb-red"><span class="s-dot"></span>İptal Edildi</span></td>
+                                    <td><span style="font-size:12px;color:var(--muted);">—</span></td>
+                                    <td>
+                                        <div class="d-flex justify-content-center gap-1">
+                                            <a href="#" class="btn-xs bx-edit" data-tip="Düzenle"><i class="bi bi-pencil-fill"></i></a>
+                                            <a href="#" class="btn-xs bx-ok" data-tip="Onayla"><i class="bi bi-check-lg"></i></a>
+                                            <a href="#" class="btn-xs bx-cancel" data-tip="İptal Et"><i class="bi bi-x-lg"></i></a>
+                                            <button class="btn-xs bx-del" data-tip="Sil"><i class="bi bi-trash3-fill"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight:700;">Emre Çelik</span></td>
+                                    <td><span style="color:var(--muted);">0544 777 00 11</span></td>
+                                    <td>06 Mar 2026</td>
+                                    <td>19:00</td>
+                                    <td><span class="guest-chip"><i class="bi bi-people-fill" style="font-size:10px;"></i>5</span></td>
+                                    <td><span class="s-badge sb-yellow"><span class="s-dot"></span>Beklemede</span></td>
+                                    <td><span style="font-size:12px;color:var(--muted);font-style:italic;">Pencere kenarı</span></td>
+                                    <td>
+                                        <div class="d-flex justify-content-center gap-1">
+                                            <a href="#" class="btn-xs bx-edit" data-tip="Düzenle"><i class="bi bi-pencil-fill"></i></a>
+                                            <a href="#" class="btn-xs bx-ok" data-tip="Onayla"><i class="bi bi-check-lg"></i></a>
+                                            <a href="#" class="btn-xs bx-cancel" data-tip="İptal Et"><i class="bi bi-x-lg"></i></a>
+                                            <button class="btn-xs bx-del" data-tip="Sil"><i class="bi bi-trash3-fill"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight:700;">Ayşe Şahin</span></td>
+                                    <td><span style="color:var(--muted);">0552 333 44 55</span></td>
+                                    <td>07 Mar 2026</td>
+                                    <td>12:30</td>
+                                    <td><span class="guest-chip"><i class="bi bi-people-fill" style="font-size:10px;"></i>2</span></td>
+                                    <td><span class="s-badge sb-green"><span class="s-dot"></span>Onaylandı</span></td>
+                                    <td><span style="font-size:12px;color:var(--muted);">—</span></td>
+                                    <td>
+                                        <div class="d-flex justify-content-center gap-1">
+                                            <a href="#" class="btn-xs bx-edit" data-tip="Düzenle"><i class="bi bi-pencil-fill"></i></a>
+                                            <a href="#" class="btn-xs bx-ok" data-tip="Onayla"><i class="bi bi-check-lg"></i></a>
+                                            <a href="#" class="btn-xs bx-cancel" data-tip="İptal Et"><i class="bi bi-x-lg"></i></a>
+                                            <button class="btn-xs bx-del" data-tip="Sil"><i class="bi bi-trash3-fill"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight:700;">Can Öztürk</span></td>
+                                    <td><span style="color:var(--muted);">0535 888 99 00</span></td>
+                                    <td>07 Mar 2026</td>
+                                    <td>20:30</td>
+                                    <td><span class="guest-chip"><i class="bi bi-people-fill" style="font-size:10px;"></i>8</span></td>
+                                    <td><span class="s-badge sb-yellow"><span class="s-dot"></span>Beklemede</span></td>
+                                    <td><span style="font-size:12px;color:var(--muted);font-style:italic;">Kurumsal yemek</span></td>
+                                    <td>
+                                        <div class="d-flex justify-content-center gap-1">
+                                            <a href="#" class="btn-xs bx-edit" data-tip="Düzenle"><i class="bi bi-pencil-fill"></i></a>
+                                            <a href="#" class="btn-xs bx-ok" data-tip="Onayla"><i class="bi bi-check-lg"></i></a>
+                                            <a href="#" class="btn-xs bx-cancel" data-tip="İptal Et"><i class="bi bi-x-lg"></i></a>
+                                            <button class="btn-xs bx-del" data-tip="Sil"><i class="bi bi-trash3-fill"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight:700;">Fatma Yıldız</span></td>
+                                    <td><span style="color:var(--muted);">0546 111 22 00</span></td>
+                                    <td>08 Mar 2026</td>
+                                    <td>18:00</td>
+                                    <td><span class="guest-chip"><i class="bi bi-people-fill" style="font-size:10px;"></i>4</span></td>
+                                    <td><span class="s-badge sb-green"><span class="s-dot"></span>Onaylandı</span></td>
+                                    <td><span style="font-size:12px;color:var(--muted);font-style:italic;">Yıl dönümü</span></td>
+                                    <td>
+                                        <div class="d-flex justify-content-center gap-1">
+                                            <a href="#" class="btn-xs bx-edit" data-tip="Düzenle"><i class="bi bi-pencil-fill"></i></a>
+                                            <a href="#" class="btn-xs bx-ok" data-tip="Onayla"><i class="bi bi-check-lg"></i></a>
+                                            <a href="#" class="btn-xs bx-cancel" data-tip="İptal Et"><i class="bi bi-x-lg"></i></a>
+                                            <button class="btn-xs bx-del" data-tip="Sil"><i class="bi bi-trash3-fill"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AKTİVİTE PANELİ -->
+            <div class="col-xl-4">
+                <div class="dash-card h-100">
+                    <div class="dash-card-header">
+                        <div>
+                            <div class="section-title">Günlük Aktiviteler</div>
+                            <div class="section-sub">Son gerçekleşen işlemler</div>
+                        </div>
+                        <span style="font-size:11px;background:var(--green-soft);color:#16a34a;padding:3px 9px;border-radius:20px;font-weight:700;">
+                            <i class="bi bi-circle-fill" style="font-size:7px;animation:pulse-g 2s infinite;"></i> Canlı
+                        </span>
+                    </div>
+                    <div class="dash-card-body pt-0">
+                        <div class="timeline">
+
+                            <div class="tl-item">
+                                <div class="tl-icon" style="background:var(--green-soft);">
+                                    <i class="bi bi-calendar2-check-fill" style="color:var(--green);"></i>
+                                </div>
+                                <div class="tl-content">
+                                    <div class="tl-title">Yeni rezervasyon oluşturuldu</div>
+                                    <div class="tl-desc">Ahmet Yılmaz — 4 kişi, 19:30</div>
+                                    <div class="tl-time">3 dakika önce</div>
+                                </div>
+                            </div>
+
+                            <div class="tl-item">
+                                <div class="tl-icon" style="background:var(--accent-soft);">
+                                    <i class="bi bi-check-circle-fill" style="color:var(--accent-dark);"></i>
+                                </div>
+                                <div class="tl-content">
+                                    <div class="tl-title">Rezervasyon onaylandı</div>
+                                    <div class="tl-desc">Fatma Yıldız — 8 Mar 18:00</div>
+                                    <div class="tl-time">18 dakika önce</div>
+                                </div>
+                            </div>
+
+                            <div class="tl-item">
+                                <div class="tl-icon" style="background:var(--purple-soft);">
+                                    <i class="bi bi-person-plus-fill" style="color:var(--purple);"></i>
+                                </div>
+                                <div class="tl-content">
+                                    <div class="tl-title">Yeni müşteri kaydı</div>
+                                    <div class="tl-desc">Selin Kaya sisteme eklendi</div>
+                                    <div class="tl-time">35 dakika önce</div>
+                                </div>
+                            </div>
+
+                            <div class="tl-item">
+                                <div class="tl-icon" style="background:var(--blue-soft);">
+                                    <i class="bi bi-receipt" style="color:var(--blue);"></i>
+                                </div>
+                                <div class="tl-content">
+                                    <div class="tl-title">Yeni sipariş alındı</div>
+                                    <div class="tl-desc">Masa 7 — ₺ 340 tutar</div>
+                                    <div class="tl-time">1 saat önce</div>
+                                </div>
+                            </div>
+
+                            <div class="tl-item">
+                                <div class="tl-icon" style="background:var(--yellow-soft);">
+                                    <i class="bi bi-star-fill" style="color:var(--yellow);"></i>
+                                </div>
+                                <div class="tl-content">
+                                    <div class="tl-title">Yeni değerlendirme geldi</div>
+                                    <div class="tl-desc">Murat Demir — ★★★★★</div>
+                                    <div class="tl-time">2 saat önce</div>
+                                </div>
+                            </div>
+
+                            <div class="tl-item">
+                                <div class="tl-icon" style="background:var(--red-soft);">
+                                    <i class="bi bi-x-circle-fill" style="color:var(--red);"></i>
+                                </div>
+                                <div class="tl-content">
+                                    <div class="tl-title">Rezervasyon iptal edildi</div>
+                                    <div class="tl-desc">Zeynep Arslan — 5 Mar 21:00</div>
+                                    <div class="tl-time">3 saat önce</div>
+                                </div>
+                            </div>
+
+                            <div class="tl-item">
+                                <div class="tl-icon" style="background:var(--teal-soft);">
+                                    <i class="bi bi-bag-plus-fill" style="color:var(--teal);"></i>
+                                </div>
+                                <div class="tl-content">
+                                    <div class="tl-title">Yeni sipariş alındı</div>
+                                    <div class="tl-desc">Masa 3 — ₺ 215 tutar</div>
+                                    <div class="tl-time">4 saat önce</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             4. GRAFİKLER
+        ══════════════════════════════════════════ -->
+        <div class="row g-3 mb-4">
+
+            <!-- Günlük Rezervasyon (Çizgi) -->
+            <div class="col-xl-5">
+                <div class="dash-card">
+                    <div class="dash-card-header">
+                        <div>
+                            <div class="section-title">Günlük Rezervasyonlar</div>
+                            <div class="section-sub">Son 7 gün</div>
+                        </div>
+                        <span style="font-size:11.5px;color:var(--muted);">Mart 2026</span>
+                    </div>
+                    <div class="dash-card-body">
+                        <div class="chart-wrap" style="height:220px;">
+                            <canvas id="lineChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kategori Sipariş (Bar) -->
+            <div class="col-xl-4">
+                <div class="dash-card">
+                    <div class="dash-card-header">
+                        <div>
+                            <div class="section-title">Kategoriye Göre Sipariş</div>
+                            <div class="section-sub">Bu ay</div>
+                        </div>
+                    </div>
+                    <div class="dash-card-body">
+                        <div class="chart-wrap" style="height:220px;">
+                            <canvas id="barChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gelir Dağılımı (Pasta) -->
+            <div class="col-xl-3">
+                <div class="dash-card">
+                    <div class="dash-card-header">
+                        <div>
+                            <div class="section-title">Gelir Dağılımı</div>
+                            <div class="section-sub">Bu ay</div>
+                        </div>
+                    </div>
+                    <div class="dash-card-body">
+                        <div class="chart-wrap" style="height:180px;">
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                        <div class="mt-3 d-flex flex-column gap-1" style="font-size:12px;">
+                            <div class="d-flex align-items-center gap-2"><span style="width:10px;height:10px;border-radius:3px;background:#e6a03c;display:inline-block;"></span> Ana Yemekler — %45</div>
+                            <div class="d-flex align-items-center gap-2"><span style="width:10px;height:10px;border-radius:3px;background:#3b82f6;display:inline-block;"></span> İçecekler — %25</div>
+                            <div class="d-flex align-items-center gap-2"><span style="width:10px;height:10px;border-radius:3px;background:#22c55e;display:inline-block;"></span> Tatlılar — %18</div>
+                            <div class="d-flex align-items-center gap-2"><span style="width:10px;height:10px;border-radius:3px;background:#8b5cf6;display:inline-block;"></span> Başlangıçlar — %12</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             5. HIZLI İŞLEMLER  +  6. SON DEĞERLENDİRMELER
+        ══════════════════════════════════════════ -->
+        <div class="row g-3">
+
+            <!-- HIZLI İŞLEMLER -->
+            <div class="col-xl-4 col-md-6">
+                <div class="dash-card h-100">
+                    <div class="dash-card-header">
+                        <div>
+                            <div class="section-title">Hızlı İşlemler</div>
+                            <div class="section-sub">Sık kullanılan kısayollar</div>
+                        </div>
+                    </div>
+                    <div class="dash-card-body">
+                        <div class="qa-grid">
+                            <a href="/Reservation/CreateReservation" class="qa-btn qa-orange">
+                                <div class="qa-icon" style="background:var(--accent-soft);">
+                                    <i class="bi bi-calendar2-plus-fill" style="color:var(--accent-dark);"></i>
+                                </div>
+                                <span>Yeni Rezervasyon</span>
+                            </a>
+                            <a href="/Product/CreateProduct" class="qa-btn qa-green">
+                                <div class="qa-icon" style="background:var(--green-soft);">
+                                    <i class="bi bi-plus-circle-fill" style="color:var(--green);"></i>
+                                </div>
+                                <span>Ürün Ekle</span>
+                            </a>
+                            <a href="/Category/CreateCategory" class="qa-btn qa-blue">
+                                <div class="qa-icon" style="background:var(--blue-soft);">
+                                    <i class="bi bi-tags-fill" style="color:var(--blue);"></i>
+                                </div>
+                                <span>Kategori Ekle</span>
+                            </a>
+                            <a href="/Campaign/CreateCampaign" class="qa-btn qa-purple">
+                                <div class="qa-icon" style="background:var(--purple-soft);">
+                                    <i class="bi bi-megaphone-fill" style="color:var(--purple);"></i>
+                                </div>
+                                <span>Kampanya Oluştur</span>
+                            </a>
+                        </div>
+
+                        <!-- Mini istatistik bölmesi -->
+                        <div class="mt-3 p-3 rounded-3" style="background:linear-gradient(135deg,#1a1a1a,#2d2a26);">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:600;text-transform:uppercase;letter-spacing:.05em;">Bugünkü Doluluk</span>
+                                <span style="font-size:13px;font-weight:800;color:var(--accent);">%74</span>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.08);border-radius:6px;height:6px;overflow:hidden;">
+                                <div style="width:74%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-dark));border-radius:6px;"></div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-2" style="font-size:11px;color:rgba(255,255,255,0.35);">
+                                <span>7 / 10 masa dolu</span>
+                                <span>3 masa müsait</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SON DEĞERLENDİRMELER -->
+            <div class="col-xl-4 col-md-6">
+                <div class="dash-card h-100">
+                    <div class="dash-card-header">
+                        <div>
+                            <div class="section-title">Son Değerlendirmeler</div>
+                            <div class="section-sub">Müşteri yorumları</div>
+                        </div>
+                        <a href="#" class="view-all">Tümü <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="dash-card-body pt-0">
+
+                        <div class="review-item">
+                            <div class="d-flex align-items-center gap-2 mb-1">
+                                <div class="review-avatar" style="background:var(--accent-dark);">AY</div>
+                                <div>
+                                    <div class="review-name">Ahmet Yılmaz</div>
+                                    <div class="review-date">2 saat önce</div>
+                                </div>
+                                <div class="ms-auto review-stars">★★★★★</div>
+                            </div>
+                            <div class="review-text">"Harika bir akşam yemeği deneyimi! Servis çok hızlı ve yemekler nefisti."</div>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="d-flex align-items-center gap-2 mb-1">
+                                <div class="review-avatar" style="background:var(--purple);">SK</div>
+                                <div>
+                                    <div class="review-name">Selin Kaya</div>
+                                    <div class="review-date">5 saat önce</div>
+                                </div>
+                                <div class="ms-auto review-stars">★★★★<span style="color:#ddd;">★</span></div>
+                            </div>
+                            <div class="review-text">"Atmosfer çok güzeldi, tekrar geleceğiz. Sadece bekleyiş biraz uzundu."</div>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="d-flex align-items-center gap-2 mb-1">
+                                <div class="review-avatar" style="background:var(--teal);">MD</div>
+                                <div>
+                                    <div class="review-name">Murat Demir</div>
+                                    <div class="review-date">Dün</div>
+                                </div>
+                                <div class="ms-auto review-stars">★★★★★</div>
+                            </div>
+                            <div class="review-text">"Vejetaryen menü seçenekleri gerçekten düşünülmüş, çok memnun kaldım."</div>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="d-flex align-items-center gap-2 mb-1">
+                                <div class="review-avatar" style="background:var(--blue);">EÇ</div>
+                                <div>
+                                    <div class="review-name">Emre Çelik</div>
+                                    <div class="review-date">2 gün önce</div>
+                                </div>
+                                <div class="ms-auto review-stars">★★★<span style="color:#ddd;">★★</span></div>
+                            </div>
+                            <div class="review-text">"Yemekler iyiydi ama pencere kenarı isteğimiz karşılanamadı. Yine de güzeldi."</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ÖZET + TAKVİM -->
+            <div class="col-xl-4">
+                <div class="dash-card h-100">
+                    <div class="dash-card-header">
+                        <div>
+                            <div class="section-title">Haftalık Özet</div>
+                            <div class="section-sub">Bu haftaki performans</div>
+                        </div>
+                    </div>
+                    <div class="dash-card-body">
+
+                        <div class="d-flex flex-column gap-3">
+
+                            <div>
+                                <div class="d-flex justify-content-between mb-1" style="font-size:12.5px;">
+                                    <span style="font-weight:600;">Onay Oranı</span>
+                                    <span style="font-weight:700;color:#16a34a;">%88</span>
+                                </div>
+                                <div style="background:#f0ede8;border-radius:6px;height:7px;overflow:hidden;">
+                                    <div style="width:88%;height:100%;background:linear-gradient(90deg,var(--green),#16a34a);border-radius:6px;"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="d-flex justify-content-between mb-1" style="font-size:12.5px;">
+                                    <span style="font-weight:600;">Masa Doluluk</span>
+                                    <span style="font-weight:700;color:var(--accent-dark);">%74</span>
+                                </div>
+                                <div style="background:#f0ede8;border-radius:6px;height:7px;overflow:hidden;">
+                                    <div style="width:74%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-dark));border-radius:6px;"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="d-flex justify-content-between mb-1" style="font-size:12.5px;">
+                                    <span style="font-weight:600;">Müşteri Memnuniyeti</span>
+                                    <span style="font-weight:700;color:var(--blue);">%92</span>
+                                </div>
+                                <div style="background:#f0ede8;border-radius:6px;height:7px;overflow:hidden;">
+                                    <div style="width:92%;height:100%;background:linear-gradient(90deg,var(--blue),#2563eb);border-radius:6px;"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="d-flex justify-content-between mb-1" style="font-size:12.5px;">
+                                    <span style="font-weight:600;">İptal Oranı</span>
+                                    <span style="font-weight:700;color:var(--red);">%8</span>
+                                </div>
+                                <div style="background:#f0ede8;border-radius:6px;height:7px;overflow:hidden;">
+                                    <div style="width:8%;height:100%;background:linear-gradient(90deg,var(--red),#dc2626);border-radius:6px;"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <hr style="border-color:var(--border);margin:18px 0;">
+
+                        <!-- Gelir özeti -->
+                        <div style="background:linear-gradient(135deg,var(--accent-soft),rgba(230,160,60,0.05));border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;">
+                            <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:700;margin-bottom:8px;">
+                                <i class="bi bi-graph-up-arrow" style="color:var(--accent);"></i> Bu Haftanın Cirosu
+                            </div>
+                            <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:800;color:var(--text);line-height:1;">
+                                ₺ 28.450
+                            </div>
+                            <div style="font-size:12px;color:var(--muted);margin-top:4px;">
+                                Geçen haftaya göre <strong style="color:#16a34a;">+₺3.120</strong> artış
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /row -->
+
+    </div><!-- /dashboard-wrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        /* ── Canlı Tarih ── */
+        (function(){
+          const tr = ['Pazar','Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi'];
+          const mo = ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+          const d = new Date();
+          document.getElementById('liveDate').textContent =
+            tr[d.getDay()] + ', ' + d.getDate() + ' ' + mo[d.getMonth()] + ' ' + d.getFullYear();
+        })();
+
+        /* ── Ortak Chart Defaults ── */
+        Chart.defaults.font.family = "'DM Sans', sans-serif";
+        Chart.defaults.font.size   = 12;
+        Chart.defaults.color       = '#9a9590';
+
+        /* ── 1. Çizgi Grafik (Günlük Rezervasyon) ── */
+        new Chart(document.getElementById('lineChart'), {
+          type: 'line',
+          data: {
+            labels: ['26 Şub','27 Şub','28 Şub','01 Mar','02 Mar','03 Mar','04 Mar'],
+            datasets: [{
+              label: 'Rezervasyon',
+              data: [5, 8, 6, 11, 9, 14, 7],
+              borderColor: '#e6a03c',
+              backgroundColor: 'rgba(230,160,60,0.08)',
+              borderWidth: 2.5,
+              pointBackgroundColor: '#e6a03c',
+              pointBorderColor: '#fff',
+              pointBorderWidth: 2,
+              pointRadius: 5,
+              tension: 0.4,
+              fill: true,
+            }]
+          },
+          options: {
+            responsive: true, maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+              x: { grid: { color: '#f5f2ee' }, border: { display: false } },
+              y: { grid: { color: '#f5f2ee' }, border: { display: false }, ticks: { stepSize: 3 }, beginAtZero: true }
+            }
+          }
+        });
+
+        /* ── 2. Bar Grafik (Kategori Sipariş) ── */
+        new Chart(document.getElementById('barChart'), {
+          type: 'bar',
+          data: {
+            labels: ['Başlangıçlar','Ana Yemekler','Tatlılar','İçecekler','Çorbalar'],
+            datasets: [{
+              label: 'Sipariş',
+              data: [42, 118, 67, 93, 38],
+              backgroundColor: ['rgba(139,92,246,0.7)','rgba(230,160,60,0.8)','rgba(34,197,94,0.7)','rgba(59,130,246,0.7)','rgba(20,184,166,0.7)'],
+              borderRadius: 7,
+              borderSkipped: false,
+            }]
+          },
+          options: {
+            responsive: true, maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+              x: { grid: { display: false }, border: { display: false } },
+              y: { grid: { color: '#f5f2ee' }, border: { display: false }, beginAtZero: true }
+            }
+          }
+        });
+
+        /* ── 3. Pasta Grafik (Gelir Dağılımı) ── */
+        new Chart(document.getElementById('pieChart'), {
+          type: 'doughnut',
+          data: {
+            labels: ['Ana Yemekler','İçecekler','Tatlılar','Başlangıçlar'],
+            datasets: [{
+              data: [45, 25, 18, 12],
+              backgroundColor: ['#e6a03c','#3b82f6','#22c55e','#8b5cf6'],
+              borderWidth: 0,
+              hoverOffset: 6,
+            }]
+          },
+          options: {
+            responsive: true, maintainAspectRatio: false,
+            cutout: '68%',
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: { label: ctx => ' ' + ctx.parsed + '%' }
+              }
+            }
+          }
+        });
+    </script>
+</body>
+</html>
+
