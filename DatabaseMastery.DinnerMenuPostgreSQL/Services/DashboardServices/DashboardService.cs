@@ -1,5 +1,7 @@
 ﻿
+using AutoMapper;
 using DatabaseMastery.DinnerMenuPostgreSQL.Context;
+using DatabaseMastery.DinnerMenuPostgreSQL.Dtos.ReservationDtos;
 using Microsoft.EntityFrameworkCore;
 
 namespace DatabaseMastery.DinnerMenuPostgreSQL.Services.DashboardServices
@@ -7,9 +9,11 @@ namespace DatabaseMastery.DinnerMenuPostgreSQL.Services.DashboardServices
     public class DashboardService : IDashboardService
     {
         private readonly AppDbContext _context;
-        public DashboardService(AppDbContext context)
+        private readonly IMapper _mapper;
+        public DashboardService(AppDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
         public async Task<int> GetApprovedReservationCountAsync()
         {
@@ -31,6 +35,19 @@ namespace DatabaseMastery.DinnerMenuPostgreSQL.Services.DashboardServices
         {
             return await _context.Reservations.CountAsync(x => x.ReservationDate.Date == DateTime.Today);
         }
+
+        public async Task<List<ResultReservationDto>> GetTodayReservationListAsync()
+        {
+            var today = DateTime.UtcNow.Date;
+
+            var values = await _context.Reservations
+                .Where(r => r.ReservationDate.Date == today)
+                .OrderBy(r => r.ReservationTime)
+                .ToListAsync();
+
+            return _mapper.Map<List<ResultReservationDto>>(values);
+        }
+
         public async Task<int> GetTotalCustomerCountAsync()
         {
             return await _context.Reservations.SumAsync(x => x.GuestCount);

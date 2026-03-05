@@ -1,4 +1,6 @@
-﻿namespace DatabaseMastery.DinnerMenuPostgreSQL.Services.DashboardServices
+﻿using DatabaseMastery.DinnerMenuPostgreSQL.Dtos.ReservationDtos;
+
+namespace DatabaseMastery.DinnerMenuPostgreSQL.Services.DashboardServices
 {
     public interface IDashboardService
     {
@@ -10,5 +12,6 @@
         Task<int> GetTotalCustomerCountAsync();
         Task<int> GetTotalMenuProductCountAsync();
         Task<int> GetTodayOrderCountAsync();
+        Task<List<ResultReservationDto>> GetTodayReservationListAsync();
     }
 }

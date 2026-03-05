@@ -1,5 +1,6 @@
 using DatabaseMastery.DinnerMenuPostgreSQL.Context;
 using DatabaseMastery.DinnerMenuPostgreSQL.Services.CategoryServices;
+using DatabaseMastery.DinnerMenuPostgreSQL.Services.ChartServices;
 using DatabaseMastery.DinnerMenuPostgreSQL.Services.DashboardServices;
 using DatabaseMastery.DinnerMenuPostgreSQL.Services.ProductServices;
 using DatabaseMastery.DinnerMenuPostgreSQL.Services.ReservationServices;
@@ -18,6 +19,7 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IReservationService, ReservationService>();
 builder.Services.AddScoped<IDashboardService, DashboardService>();
+builder.Services.AddScoped<IChartService, ChartService>();
 
 
 // Add services to the container.
