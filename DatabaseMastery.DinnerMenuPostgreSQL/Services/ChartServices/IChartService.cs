@@ -6,6 +6,7 @@ namespace DatabaseMastery.DinnerMenuPostgreSQL.Services.ChartServices
     {
         Task<List<ReservationChartDto>> GetLast7DaysReservationCountAsync();
         Task<List<CategoryProductCountChartDto>> GetCategoryProductCountAsync();
+        Task<List<CategoryAvgPriceChartDto>> GetCategoryAvgPriceAsync();
 
     }
 }

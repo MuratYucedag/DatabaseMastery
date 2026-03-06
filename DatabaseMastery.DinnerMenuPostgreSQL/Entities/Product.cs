@@ -10,5 +10,7 @@
         public decimal Price { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+        public decimal AverageRating { get; set; } = 0;  // Trigger ile otomatik güncellenecek
+        public List<Review> Reviews { get; set; }
     }
 }

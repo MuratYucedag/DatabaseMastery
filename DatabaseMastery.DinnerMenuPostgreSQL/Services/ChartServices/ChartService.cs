@@ -58,5 +58,26 @@ namespace DatabaseMastery.DinnerMenuPostgreSQL.Services.ChartServices
 
             return result;
         }
+
+        public async Task<List<CategoryAvgPriceChartDto>> GetCategoryAvgPriceAsync()
+        {
+            var result = await _context.Categories
+                .Where(c => c.CategoryStatus)
+                .Select(c => new CategoryAvgPriceChartDto
+                {
+                    CategoryName = c.CategoryName,
+                    AvgPrice = c.Products
+                        .Where(p => p.Status)
+                        .Any()
+                            ? Math.Round((decimal)c.Products
+                                .Where(p => p.Status)
+                                .Average(p => (double)p.Price), 2)
+                            : 0
+                })
+                .OrderByDescending(c => c.AvgPrice)
+                .ToListAsync();
+
+            return result;
+        }
     }
 }

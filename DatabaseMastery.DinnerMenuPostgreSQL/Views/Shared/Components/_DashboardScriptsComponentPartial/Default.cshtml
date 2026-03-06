@@ -75,27 +75,29 @@
         }
     });
 
-    /* ── 3. Pasta Grafik (Gelir Dağılımı) ── */
+      /* ── 3. Pasta Grafik (Kategori Ortalama Fiyat) ── */
     new Chart(document.getElementById('pieChart'), {
-      type: 'doughnut',
-      data: {
-        labels: ['Ana Yemekler','İçecekler','Tatlılar','Başlangıçlar'],
-        datasets: [{
-          data: [45, 25, 18, 12],
-          backgroundColor: ['#e6a03c','#3b82f6','#22c55e','#8b5cf6'],
-          borderWidth: 0,
-          hoverOffset: 6,
-        }]
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        cutout: '68%',
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            callbacks: { label: ctx => ' ' + ctx.parsed + '%' }
-          }
+        type: 'doughnut',
+        data: {
+            labels: window.pieChartLabels,
+            datasets: [{
+                data: window.pieChartData,
+                backgroundColor: ['#e6a03c','#3b82f6','#22c55e','#8b5cf6','#14b8a6','#ef4444','#f59e0b'],
+                borderWidth: 0,
+                hoverOffset: 6,
+            }]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            cutout: '68%',
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: ctx => ' ₺' + parseFloat(ctx.parsed).toFixed(2)
+                    }
+                }
+            }
         }
-      }
     });
 </script>
